@@ -1,0 +1,89 @@
+.game-container {
+    height: 100%;
+}
+
+.game-wrapper {
+    padding: 30px;
+}
+
+.game-intro {
+    background-color: #80808014;
+    max-width: 600px;
+    padding: 20px;
+    margin: 30px auto;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.introductie-intro {
+    background-color: #80808014;
+    max-width: 600px;
+    padding: 20px;
+    margin: 30px auto;
+    border-radius: 30px;
+    text-align: center;
+}
+
+
+
+.logo {
+    width: 120px;
+    margin: auto;
+}
+
+.logo img {
+    width: 100%;
+}
+
+ul.homeList  {
+    padding: 0;
+}
+
+ul.introductieList  {
+    padding-bottom: 20px;
+}
+
+li.homeList-play{
+    list-style: none;
+    background-color: #00a8ff;
+    text-align: center;
+    padding: 14px;
+    border-radius: 30px;
+    margin: 10px;
+}
+
+li.homeList{
+    list-style: none;
+    background-color: #173748;
+    text-align: center;
+    padding: 14px;
+    border-radius: 30px;
+    margin: 10px;
+}
+
+
+li.homeList a {
+    color: white;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+
+li.homeList-play a {
+    color: white;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+li.introductieList {
+    list-style: none;
+    padding: 6px;
+}
+
+@media only screen and (max-width: 600px) {
+    .game-intro  {
+        width: 100%;
+        padding: 0;
+        maring: 0;
+    }
+}
