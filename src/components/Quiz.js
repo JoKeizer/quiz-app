@@ -3,6 +3,10 @@ import {QuizData} from "./Quiz-data";
 import Stopwatch from './Stopwatch';
 import './Quiz.css';
 import {Link} from "react-router-dom";
+import "splitting/dist/splitting.css";
+import "splitting/dist/splitting-cells.css";
+import Splitting from "splitting";
+
 
 console.log(QuizData)
 
@@ -32,6 +36,7 @@ class Quiz extends Component {
 
     componentDidMount() {
         this.loadQuiz();
+        Splitting();
     }
 
     nextQuestionHandler = () => {
@@ -124,6 +129,10 @@ class Quiz extends Component {
                             <img src={images}/>
                         </div>
 
+                        <div className="vertical-flip" data-splitting="cells" data-columns="4" data-rows="4"
+                             data-image="true">
+                            <img src={images}/>
+                        </div>
                     </div>
 
                     <ul className="questionList">

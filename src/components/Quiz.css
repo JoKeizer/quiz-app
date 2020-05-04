@@ -1,3 +1,46 @@
+@font-face {
+    font-family: 'Janda-Manatee-Solid';
+    src: url('../fonts/JandaManateeSolid.woff2') format('woff2'),
+        url('../fonts/JandaManateeSolid.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Feeling-Good';
+    src: url('../fonts/FeelingGood.woff2') format('woff2'),
+        url('../fonts/FeelingGood.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF-Pro-Text';
+    src: url('../fonts/SFProText-Regular.woff2') format('woff2'),
+        url('../fonts/SFProText-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF-Pro-Text-Semibild';
+    src: url('../fonts/SFProText-Semibold.woff2') format('woff2'),
+        url('../fonts/SFProText-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+:root {
+    --primaryColor: #fdcad1;
+    --secondaryColor: #fdcad1;
+    --primaryFont: 'Feeling-Good';
+  }
+
+h1 {
+    font-family: 'Feeling-good';
+    /* box-shadow: 10px 10px 5px 0px rgba(234,99,9,1); */
+}
+
 .quiz-container {
     background-color: #80808014;
     max-width: 800px;
@@ -98,6 +141,35 @@ ul.questionList {
 
 .stopwatch {
     padding: 10px 0 0 0;
+}
+
+.vertical-flip {
+    perspective: 600px;
+}
+
+.vertical-flip .cell {
+    transform-style: preserve-3d;
+
+    animation: vertical-flip 0.7s cubic-bezier(0.35, 0.33, 0, 1.5);
+    animation-delay: calc(0.25s + (0.05s * var(--cell-index)));
+
+    transition: transform 0.7s cubic-bezier(0.35, 0.33, 0, 1.5);
+    transition-delay: calc(
+            0.25s + (0.05s * (var(--cell-total) - var(--cell-index)))
+    );
+}
+
+.vertical-flip:hover .cell {
+    transform: rotateX(180deg);
+}
+
+@keyframes vertical-flip {
+    0% {
+        transform: rotateX(360deg);
+    }
+    100% {
+        transform: rotateX(0deg);
+    }
 }
 
 @media only screen and (max-width: 600px) {
